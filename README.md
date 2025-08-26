@@ -1,6 +1,12 @@
 # staticscan
 Source code analysis with telescopic ruleset.
 
+## Requirements
+```
+PyYAML>=6.0
+```
+
+
 ## Languages:
 ```python
 def map_ext_to_lang(self, ext):
