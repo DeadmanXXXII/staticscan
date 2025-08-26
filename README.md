@@ -74,7 +74,7 @@ Output will show any matches with line numbers, severity, and rule IDs.
 
 You can also save the output:
 ```
-python cli.py /path/to/myfile.py --fmt json --output report.json
+python staticscan.py /path/to/myfile.py --fmt json --output report.json
 ```
 
 ---
@@ -110,7 +110,7 @@ No need to limit to a single language; the scanner automatically supports multi-
 
 If you want to scan only certain languages in a mixed project:
 ```
-python cli.py /path/to/project --ruleset python javascript
+python staticscan.py /path/to/project --ruleset python javascript
 ```
 Only Python and JavaScript rules will be applied.
 
@@ -136,7 +136,7 @@ Low-severity matches are ignored.
 
 Scan a mixed-language project, only Python and Rust rules, only high-severity issues, save output to JSON:
 ```
-python cli.py /path/to/project --ruleset python rust --severity high --fmt json --output report.json
+python staticscan.py /path/to/project --ruleset python rust --severity high --fmt json --output report.json
 ```
 ✅ Detects Python and Rust files
 
