@@ -1,6 +1,11 @@
 # staticscan
 Source code analysis with telescopic ruleset.
 
+A very small static code analysis cli tool.
+Also works on a smartphone. 
+No massive installs, downloads or compiles.
+This is a precompute vulnerability scanner for source code.
+
 ## Requirements
 ```python
 PyYAML>=6.0
