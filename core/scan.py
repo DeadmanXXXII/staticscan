@@ -8,16 +8,46 @@ class StaticScanner:
         self.rules = load_rules(rules_dir)
 
     def map_ext_to_lang(self, ext):
-        ext_map = {
-            ".py": "python",
-            ".js": "javascript",
-            ".php": "php",
-            ".java": "java",
-            ".kt": "kotlin",
-            ".R": "r",
-            ".rs": "rust"
-        }
-        return ext_map.get(ext.lower(), None)
+    ext_map = {
+        # Scripting / high-level languages
+        ".py": "python",
+        ".js": "javascript",
+        ".php": "php",
+        ".rb": "ruby",
+        ".pl": "perl",
+        ".R": "r",
+
+        # JVM / Kotlin
+        ".java": "java",
+        ".kt": "kotlin",
+        ".scala": "scala",
+
+        # Rust
+        ".rs": "rust",
+
+        # C-family languages
+        ".c": "c",
+        ".h": "c",          # header file
+        ".cpp": "cpp",
+        ".hpp": "cpp",      # header file
+        ".cc": "cpp",
+        ".cxx": "cpp",
+        ".cs": "csharp",
+        
+        # Configuration / markup
+        ".json": "json",
+        ".yaml": "yaml",
+        ".yml": "yaml",
+        ".xml": "xml",
+        ".toml": "toml",
+        ".ini": "ini",
+
+        # Shell / scripts
+        ".sh": "shell",
+        ".bat": "batch",
+        ".ps1": "powershell",
+    }
+    return ext_map.get(ext.lower(), None)
 
     def scan_file(self, file_path, severity_filter=None, ruleset_filter=None):
         results = []
