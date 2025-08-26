@@ -1,0 +1,6 @@
+# staticscan is pure Python, no external packages required for now
+# Add any future dependencies here
+
+# Example:
+# PyYAML for YAML scanning
+PyYAML>=6.0
