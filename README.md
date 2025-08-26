@@ -2,7 +2,7 @@
 Source code analysis with telescopic ruleset.
 
 ## Requirements
-```
+```python
 PyYAML>=6.0
 ```
 
